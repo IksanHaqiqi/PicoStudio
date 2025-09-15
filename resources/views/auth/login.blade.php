@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Login Page
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-800">
+    <nav class="bg-black bg-opacity-50 w-full py-4 fixed top-0 z-20">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="flex items-center">
+                <img alt="Pico logo" class="h-12" height="50" src="publicAsset/Pico.Studio_logo.svg"
+                    width="100" />
+            </div>
+            <div class="flex space-x-6 text-white">
+                <a class="hover:text-yellow-500" href="index.html">
+                    Beranda
+                </a>
+                <a class="hover:text-yellow-500" href="index.html">
+                    Layanan
+                </a>
+                <a class="hover:text-yellow-500" href="blog.html">
+                    Blog
+                </a>
+                <a class="hover:text-yellow-500" href="contact.html">
+                    Kontak
+                </a>
+            </div>
+            <div class="flex space-x-4">
+                <a class=" text-white font-bold py-2 px-4 rounded hover:bg-yellow-600" href="{{ route('register') }}">
+                    Daftar
+                </a>
+                <a class="bg-yellow-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-600" href="masuk.html">
+                    Masuk
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="min-h-screen flex flex-col items-center justify-center pt-20">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-cover bg-center"
+            style="background-image: url(Asset/Login_Thumbhnail.png);">
+        </div>
+        <div class="relative z-10 w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex justify-center mb-6">
+                <img alt="Pico logo" class="h-12" height="50" src="Asset/Pico.Studio_logo.svg" width="100" />
+            </div>
+            <h2 class="text-2xl font-bold text-center mb-2">
+                MASUK
+            </h2>
+            <p class="text-center text-gray-600 mb-6">
+                Media &amp; audio visualisasi yang ciamik siap hadir didekatmu
+            </p>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+
+                        EMAIL ADDRESS
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          id="email" placeholder="buditaufik@example.com" type="email" />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        PASSWORD
+                    </label>
+                    <div class="relative">
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="password" placeholder="******************" type="password" />
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                            <i class="fas fa-eye">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mb-6">
+                    <label class="inline-flex items-center">
+                        <input class="form-checkbox text-yellow-500" type="checkbox" />
+                        <span class="ml-2 text-gray-700">
+                            Remember Me
+                        </span>
+                    </label>
+                    <a class="text-sm text-yellow-500 hover:text-yellow-600" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                        type="button">
+                        MASUK
+                    </button>
+                </div>
+            </form>
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">
+                    ATAU
+                </p>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <a class="text-gray-700" href="#">
+                    <i class="fab fa-google fa-2x">
+                    </i>
+                </a>
+                <a class="text-gray-700" href="#">
+                    <i class="fab fa-apple fa-2x">
+                    </i>
+                </a>
+                <a class="text-gray-700" href="#">
+                    <i class="fab fa-facebook fa-2x">
+                    </i>
+                </a>
+            </div>
+            <footer class="absolute bottom-0 w-full text-center text-white py-4">
+                © Copyright 2024, All Rights Reserved by Pico.Studio
+            </footer>
+        </div>
+</body>
+
+</html>

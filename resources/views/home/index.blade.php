@@ -13,7 +13,7 @@
         alt="Hero Image"
         class="w-full h-[500px] object-cover"
         height="1080"
-        src="/Asset/Beranda1.png"
+        src="{{ asset('PicoStudio/Asset/Beranda1.png') }}"
         width="1920"
       />
       <div
@@ -47,7 +47,7 @@
             <h3 class="text-xl font-bold mb-4">Desain Grafis</h3>
             <a
               class="bg-yellow-500 text-black px-4 py-2  rounded"
-              href="berandadesain2.html"
+              href="{{ route('desain') }}"
             >
               Lihat
             </a>
@@ -63,7 +63,7 @@
             <h3 class="text-xl font-bold mb-4">Videografis</h3>
             <a
               class="bg-yellow-500 text-black px-4 py-2  rounded"
-              href="berandadesain3.html"
+              href="{{ route('video') }}"
             >
               Lihat
             </a>
@@ -79,7 +79,7 @@
             alt="Camera Head"
             class="w-128 h-128 object-cover"
             height="300"
-            src="Asset/Group 13.png"
+            src="{{ asset('PicoStudio/Asset/Group 13.png')}}"
             width="500"
           />
           <div

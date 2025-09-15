@@ -6,15 +6,16 @@
               alt="Pico logo"
               class="h-12"
               height="50"
-              src="Asset/Pico.Studio_logo.svg"
+              src="{{ asset('PicoStudio/Asset/Pico.Studio_logo.svg')}}"
               width="100"
             />
           </div>
-          <div class="flex space-x-6 text-white">
-            <a class="hover:text-yellow-500" href="#"> Beranda </a>
-            <a class="hover:text-yellow-500" href="#layanan"> Layanan </a>
-            <a class="hover:text-yellow-500" href="#blog"> Blog </a>
-            <a class="hover:text-yellow-500" href="#kontak"> Kontak </a>
+          <div class="flex space-x-6 text-white" id="navbar-links">
+            <a class="hover:text-yellow-500" href="{{ route('home') }}" > Beranda </a>
+            <a class="hover:text-yellow-500" href="{{ route('desain') }}"> Desain </a>
+            <a class="hover:text-yellow-500" href="{{ route('video') }}"> Video </a>
+            <a class="hover:text-yellow-500" href="{{ route('blog') }}"> Blog </a>
+            <a class="hover:text-yellow-500" href="{{ url('/#kontak') }}"> Kontak </a>
           </div>
           <div class="flex space-x-4">
             <a
@@ -33,3 +34,18 @@
         </div>
       </nav>
     </header>
+
+    <script>
+  // ambil semua link di navbar
+  const links = document.querySelectorAll('#navbar-links a');
+
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      // hapus active dari semua link
+      links.forEach(l => l.classList.remove('text-yellow-500', 'font-bold'));
+
+      // tambahkan active ke link yang diklik
+      this.classList.add('text-yellow-500', 'font-bold');
+    });
+  });
+</script>
