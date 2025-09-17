@@ -45,8 +45,7 @@ public function login(Request $request){
 
     if (auth()->attempt($credentials)) {
         $request->session()->regenerate();
-        return redirect()->intended('home');
-    }
+        return redirect()->intended('home'); }
 
     return back()->withErrors([
         'email' => 'akun tidak ditemukan',

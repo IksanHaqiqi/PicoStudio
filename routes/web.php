@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,8 @@ route::middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 
 });
+
+Route::get('/admin/dashboard', [UserController::class, 'dashboard'])->name('dashboard.admin');
 
 // Route::get('/register', function () {
 //     return view('auth.register');
